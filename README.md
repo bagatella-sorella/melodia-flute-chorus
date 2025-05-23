@@ -1,1 +1,303 @@
 # melodia-flute-chorus
+index.html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Флейтовый Хор "Melodia"</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins :wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a3d6d;
+      --light: #fff;
+      --dark: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffffff, #f5f8fa);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://picsum.photos/id/66/1920/1080 ') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .section {
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .dark-bg {
+      background-color: #f8f8f8;
+    }
+
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .member-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    .member-card p {
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .audio-player {
+      background: var(--primary);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input,
+    form textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: var(--primary);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    form button:hover {
+      background: #132b4c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--primary);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .member-card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <nav>
+    <div class="logo">Melodia Flute Choir</div>
+    <ul class="nav-links">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#members">Участники</a></li>
+      <li><a href="#concerts">Концерты</a></li>
+      <li><a href="#media">Медиа</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="hero-text">
+    <h1>Флейтовый Хор "Melodia"</h1>
+    <p>Гармония звуков и эмоций</p>
+  </div>
+</header>
+
+<section id="about" class="section">
+  <h2>О нас</h2>
+  <p>Наш флейтовый хор объединяет профессиональных флейтистов из разных городов. Мы исполняем классические и современные произведения, создавая уникальное звучание.</p>
+</section>
+
+<section id="members" class="section dark-bg">
+  <h2>Наши участники</h2>
+  <div class="members-grid">
+    <div class="member-card"><img src="https://picsum.photos/id/1027/300/300 " alt="Участник 1"><p>Анна Иванова</p></div>
+    <div class="member-card"><img src="https://picsum.photos/id/1012/300/300 " alt="Участник 2"><p>Дмитрий Петров</p></div>
+    <div class="member-card"><img src="https://picsum.photos/id/1024/300/300 " alt="Участник 3"><p>Екатерина Смирнова</p></div>
+  </div>
+</section>
+
+<section id="concerts" class="section">
+  <h2>Ближайшие концерты</h2>
+  <ul>
+    <li>15 апреля 2025 — Москва, Большой зал консерватории</li>
+    <li>10 мая 2025 — Санкт-Петербург, Филармония</li>
+  </ul>
+</section>
+
+<section id="media" class="section dark-bg">
+  <h2>Медиа</h2>
+  <p>Послушайте наш последний концерт:</p>
+  <div class="audio-player">
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3 " type="audio/mp3">
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+
+  <h2 style="margin-top: 50px;">Фотогалерея</h2>
+  <div class="gallery">
+    <img src="https://picsum.photos/id/66/600/400 " alt="Фото 1">
+    <img src="https://picsum.photos/id/68/600/400 " alt="Фото 2">
+    <img src="https://picsum.photos/id/69/600/400 " alt="Фото 3">
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Связаться с нами</h2>
+  <form>
+    <input type="text" placeholder="Ваше имя" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Сообщение"></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Флейтовый хор "Melodia". Все права защищены.</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  sections.forEach(section => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(50px)";
+    section.style.transition = "all 0.6s ease-out";
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
